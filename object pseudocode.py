@@ -83,9 +83,9 @@ cat1 = Cat(5, "black", "large")
 # Python under-the-hood magic) and sets w = 5, c = "black", s = "large".
 
 # to access attributes we use a . (period)
-print(cat1.size)    # this would print "large"
-print(cat1.whiskers)    #this would print 5
-print(cat1.feline)  # this would print True
+print(cat1.s)    # this would print "large"
+print(cat1.w)    #this would print 5
+print(cat1.f)  # this would print True
 
 # to access methods we also use a .
 cat1.meow()     # this would print "Meow!"
@@ -97,7 +97,7 @@ cat1.eat("ice cream")   # would print "The cat ate all the ice cream!"
 # now we are going to define a second instance of the Cat object
 cat2 = Cat(4, "orange", "medium")
 
-print(cat2.size)    # this would print ("medium")
+print(cat2.s)    # this would print ("medium")
 cat2.meow()     # this would print "Meow!"
 
 # we can do this for as many Cats as we want!
@@ -107,10 +107,11 @@ cat5 = Cat(10, "spotted", "small")
 
 # we can also do the following to redefine attributes of an existing
 # instance of the Cat object:
-cat1.size = "small"
-print(cat1.size)    # this would print "small" even though it used to be "large"
+cat1.s = "small"
+print(cat1.s)    # this would print "small" even though it used to be "large"
 
 # ! THE FOLLOWING CODE WILL NOT WORK !
 badcat1 = Cat(5, "brown", "medium", False)   # we have not set up a fourth parameter
 badcat2 = Cat()    # we have not defined our whiskers, color, and size attributes
 badcat3 = (2, "green", "big")   # we have not told Python to use the Cat object
+print(cat2.size)    # this would give an error, we would need to say cat2.s
